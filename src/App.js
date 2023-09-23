@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { ThemeProvider } from "styled-components/native";
 import { theme } from "./theme";
 import { Dimensions, StatusBar } from "react-native";
@@ -66,6 +66,10 @@ export default function App() {
     //React 엘리먼트를 DOM 노드에 매핑하면 변경된 것을 감지할 수 없는 이유는 뭐야? -> React 엘리먼트를 DOM 노드에 매핑하면 React 엘리먼트를 React 엘리먼트에 매핑하는 과정을 거치지 않기 때문
     delete currentTasks[id];
     setTasks(currentTasks);
+    //useState에 대해 설명해 줘 -> https://ko.reactjs.org/docs/hooks-state.html
+    //useState는 무엇을 하는 거야? -> React에서 상태를 관리할 수 있게 해 줌
+    //상태를 관리할 수 있게 해 주는 이유는 뭐야? -> 상태를 관리할 수 있게 해 주면 상태가 변경되었을 때 변경된 것을 감지할 수 있기 때문
+    //상태가 변경되었을 때 변경된 것을 감지할 수 있는 이유는 뭐야? -> 상태가 변경되었을 때 변경된 것을 감지하면 변경된 것을 화면에 반영할 수 있기 때문
   };
 
   const _handleTextChange = (text) => {
